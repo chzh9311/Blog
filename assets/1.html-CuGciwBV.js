@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-0xUsLmj9.js";const o={};function r(c,l){return a(),t("div")}const i=e(o,[["render",r],["__file","1.html.vue"]]),s=JSON.parse('{"path":"/categories/lilunbiji/1.html","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{i as comp,s as data};
