@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 900" style="enable-background:new 0 0 2000 900;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;}
+	.st1{font-family:'TimesNewRomanPS-ItalicMT';}
+	.st2{font-size:32px;}
+	.st3{font-family:'TimesNewRomanPSMT';}
+	.st4{fill:none;stroke:#D8194B;stroke-width:2;stroke-miterlimit:10;}
+	.st5{fill:#D318C6;}
+	.st6{fill:none;stroke:#D318C6;stroke-width:4;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#FF9E1D;stroke-width:4;stroke-miterlimit:10;}
+	.st8{fill:#FF9E1D;}
+	.st9{fill:#9927C9;}
+	.st10{fill:none;stroke:#631AD6;stroke-width:4;stroke-miterlimit:10;}
+	.st11{fill:#631AD6;}
+	.st12{fill:none;stroke:#F7931E;stroke-width:4;stroke-miterlimit:10;}
+	.st13{fill:#F7931E;}
+	.st14{fill:#2B96CC;}
+	.st15{fill:none;}
+	.st16{fill:none;stroke:#2B96CC;stroke-width:4;stroke-miterlimit:10;}
+	.st17{fill:#F15A24;}
+</style>
+<g>
+	<g>
+		<line class="st0" x1="334.3" y1="401.6" x2="198.6" y2="498.9"/>
+		<g>
+			<polygon points="198.9,487.8 201,497.2 209.3,502.2 187,507.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="334.3" y1="401.6" x2="603.4" y2="443.7"/>
+		<g>
+			<polygon points="595.3,451.4 600.5,443.2 598.1,433.8 617.5,445.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="334.3" y1="401.6" x2="334.3" y2="111.5"/>
+		<g>
+			<polygon points="343.2,118.3 334.3,114.5 325.5,118.3 334.3,97.2 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 303.501 405.7393)" class="st1 st2">O</text>
+<text transform="matrix(1 0 0 1 171.0376 530.0303)" class="st1 st2">x</text>
+<text transform="matrix(1 0 0 1 627.2275 457.9482)" class="st1 st2">y</text>
+<text transform="matrix(1 0 0 1 336.3652 92.8496)" class="st1 st2">z</text>
+<text transform="matrix(1 0 0 1 348.8652 92.8496)" class="st3 st2">(</text>
+<text transform="matrix(1 0 0 1 359.4652 92.8496)" class="st1 st2">Z</text>
+<text transform="matrix(1 0 0 1 377.2652 92.8496)" class="st3 st2">)</text>
+<ellipse class="st4" cx="334.1" cy="401.4" rx="304.8" ry="120.7"/>
+<text transform="matrix(1 0 0 1 394.2173 549.0713)" class="st5 st1 st2">X</text>
+<text transform="matrix(1 0 0 1 635.9873 363.1455)" class="st5 st1 st2">Y</text>
+<g>
+	<g>
+		<line class="st6" x1="334.4" y1="401.7" x2="394.8" y2="506.6"/>
+		<g>
+			<polygon class="st5" points="383.8,505.2 393.4,504 399.2,496.3 402,519 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st6" x1="334.4" y1="401.7" x2="610.8" y2="366.8"/>
+		<g>
+			<polygon class="st5" points="605.2,376.5 607.8,367.2 603,358.8 625,365 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st7" d="M304,190c8.2,10.7,31.4,16,53.3,11.4"/>
+		<g>
+			<polygon class="st8" points="353.4,211.6 354.4,202 348.3,194.5 371,197 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 285 226)" class="st8 st1 st2">α</text>
+<text transform="matrix(1 0 0 1 1076.2173 549.0713)" class="st5 st1 st2">X</text>
+<text transform="matrix(1 0 0 1 1317.9873 363.1455)" class="st5 st1 st2">Y</text>
+<text transform="matrix(1 0 0 1 1088.9873 180.1455)" class="st9 st1 st2">Y’</text>
+<text transform="matrix(1 0 0 1 1060.9873 454.1455)" class="st9 st1 st2">X’</text>
+<text transform="matrix(1 0 0 1 738.654 232.0713)" class="st9 st1 st2">Z’</text>
+<g>
+	<g>
+		<line class="st6" x1="1016.4" y1="401.7" x2="1076.8" y2="506.6"/>
+		<g>
+			<polygon class="st5" points="1065.8,505.2 1075.4,504 1081.2,496.3 1084,519 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st6" x1="1016.4" y1="401.7" x2="1292.8" y2="366.8"/>
+		<g>
+			<polygon class="st5" points="1287.2,376.5 1289.8,367.2 1285,358.8 1307,365 			"/>
+		</g>
+	</g>
+</g>
+<ellipse class="st4" cx="1016.1" cy="401.4" rx="282.9" ry="304.4"/>
+<g>
+	<g>
+		<line class="st0" x1="1016.3" y1="401.6" x2="880.6" y2="498.9"/>
+		<g>
+			<polygon points="880.9,487.8 883,497.2 891.3,502.2 869,507.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="1016.3" y1="401.6" x2="1285.4" y2="443.7"/>
+		<g>
+			<polygon points="1277.3,451.4 1282.5,443.2 1280.1,433.8 1299.5,445.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="1016.3" y1="401.6" x2="1016.3" y2="111.5"/>
+		<g>
+			<polygon points="1025.2,118.3 1016.3,114.5 1007.5,118.3 1016.3,97.2 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 985.501 405.7393)" class="st1 st2">O</text>
+<text transform="matrix(1 0 0 1 853.0376 530.0303)" class="st1 st2">x</text>
+<text transform="matrix(1 0 0 1 1309.2275 457.9482)" class="st1 st2">y</text>
+<text transform="matrix(1 0 0 1 1018.3652 92.8496)" class="st1 st2">z</text>
+<text transform="matrix(1 0 0 1 1030.8652 92.8496)" class="st3 st2">(</text>
+<text transform="matrix(1 0 0 1 1041.4652 92.8496)" class="st1 st2">Z</text>
+<text transform="matrix(1 0 0 1 1059.2651 92.8496)" class="st3 st2">)</text>
+<g>
+	<g>
+		<line class="st10" x1="1016" y1="402" x2="1122.7" y2="182.9"/>
+		<g>
+			<polygon class="st11" points="1127.8,192.8 1121.4,185.5 1111.8,185 1129,170 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st10" x1="1016" y1="402" x2="1044.7" y2="424.2"/>
+		<g>
+			<polygon class="st11" points="1033.9,427.1 1042.3,422.4 1044.8,413.1 1056,433 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st10" x1="1016" y1="402" x2="786.9" y2="249.9"/>
+		<g>
+			<polygon class="st11" points="797.5,246.2 789.4,251.6 787.6,261.1 775,242 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st10" x1="1666" y1="402" x2="1772.7" y2="182.9"/>
+		<g>
+			<polygon class="st11" points="1777.8,192.8 1771.4,185.5 1761.8,185 1779,170 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st10" x1="1666" y1="402" x2="1694.7" y2="424.2"/>
+		<g>
+			<polygon class="st11" points="1683.9,427.1 1692.3,422.4 1694.8,413.1 1706,433 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st10" x1="1666" y1="402" x2="1436.9" y2="249.9"/>
+		<g>
+			<polygon class="st11" points="1447.5,246.2 1439.4,251.6 1437.6,261.1 1425,242 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st12" d="M949,485c10.2-26.3-8.4-54.1-33.3-52.1"/>
+		<g>
+			<polygon class="st13" points="920.2,423.1 918.7,432.7 924.6,440.3 902,437 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 887 424)" class="st13 st1 st2">β</text>
+<ellipse class="st4" cx="1663.1" cy="401.4" rx="156.1" ry="304.4"/>
+<text transform="matrix(1 0 0 1 1708.2173 447.0713)" class="st11 st1 st2">X</text>
+<text transform="matrix(1 0 0 1 1790.2173 171.0713)" class="st11 st1 st2">Y</text>
+<text transform="matrix(1 0 0 1 1431.2173 236.0713)" class="st11 st1 st2">Z</text>
+<text transform="matrix(1 0 0 1 1673.2173 474.0713)" class="st14 st1 st2">X’</text>
+<text transform="matrix(1 0 0 1 1829.2173 232.0713)" class="st14 st1 st2">Y’</text>
+<text transform="matrix(1 0 0 1 1481.2173 160.0713)" class="st14 st1 st2">Z’</text>
+<g>
+	<g>
+		<line class="st0" x1="1663.3" y1="401.6" x2="1527.6" y2="498.9"/>
+		<g>
+			<polygon points="1527.9,487.8 1530,497.2 1538.3,502.2 1516,507.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="1663.3" y1="401.6" x2="1932.4" y2="443.7"/>
+		<g>
+			<polygon points="1924.3,451.4 1929.5,443.2 1927.1,433.8 1946.5,445.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="1663.3" y1="401.6" x2="1663.3" y2="111.5"/>
+		<g>
+			<polygon points="1672.2,118.3 1663.3,114.5 1654.5,118.3 1663.3,97.2 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 1632.501 405.7393)" class="st1 st2">O</text>
+<text transform="matrix(1 0 0 1 1500.0376 530.0303)" class="st1 st2">x</text>
+<text transform="matrix(1 0 0 1 1956.2275 457.9482)" class="st1 st2">y</text>
+<text transform="matrix(1 0 0 1 1665.3652 92.8496)" class="st1 st2">z</text>
+<g>
+	<path class="st15" d="M1779,136"/>
+</g>
+<g>
+	<path class="st15" d="M1663,401"/>
+</g>
+<g>
+	<path class="st15" d="M1391,307"/>
+</g>
+<g>
+	<path class="st15" d="M1663,402"/>
+</g>
+<g>
+	<g>
+		<line class="st16" x1="1665" y1="401" x2="1677" y2="433.6"/>
+		<g>
+			<polygon class="st14" points="1666.4,430.3 1676,430.8 1683,424.2 1682,447 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st16" x1="1665" y1="401" x2="1487" y2="182.1"/>
+		<g>
+			<polygon class="st14" points="1498.2,181.7 1488.9,184.4 1484.4,193 1478,171 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st16" x1="1666" y1="402" x2="1802.9" y2="237"/>
+		<g>
+			<polygon class="st14" points="1805.4,247.9 1801,239.3 1791.7,236.5 1812,226 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<path class="st15" d="M1730,133"/>
+</g>
+<g>
+	<path class="st15" d="M1665,401"/>
+</g>
+<g>
+	<g>
+		<path class="st12" d="M1861,447c-2-10.5,2.5-21.4,10-26.8"/>
+		<g>
+			<polygon class="st13" points="1867.4,431.5 1868.4,421.9 1862.3,414.5 1885,417 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 1848 406)" class="st17 st1 st2">γ</text>
+<text transform="matrix(1 0 0 1 313.6821 824.0898)" class="st3 st2">(1)</text>
+<text transform="matrix(1 0 0 1 1001.6821 824.0898)" class="st3 st2">(2)</text>
+<text transform="matrix(1 0 0 1 1653.6821 824.0898)" class="st3 st2">(3)</text>
+<g>
+	<g>
+		<line class="st0" x1="494" y1="814" x2="863.7" y2="814"/>
+		<g>
+			<polygon points="856.9,822.9 860.7,814 856.9,805.1 878,814 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="1175" y1="814" x2="1544.7" y2="814"/>
+		<g>
+			<polygon points="1537.9,822.9 1541.7,814 1537.9,805.1 1559,814 			"/>
+		</g>
+	</g>
+</g>
+</svg>
