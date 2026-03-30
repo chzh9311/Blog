@@ -35,8 +35,6 @@ mathjax: true
 
 ![](EulerAngle/Eulerangles.png)
 
-
-
 ### 基于全局坐标系的旋转
 
 这种旋转非常好理解，世界坐标系是不变的，刚体的局部坐标系先后绕三个固定的轴作旋转，就是这种欧拉角的效果了。同样的，用分布图解来看，下图显示了顺序为$z-x-y$的欧拉角所展示的结果：
@@ -97,6 +95,7 @@ $$
 如果旋转是绕着局部坐标系进行的，所有的坐标又都是或可以看成局部坐标系，那么我们就可以当全局坐标系不存在。假设变换前后的固定点在局部坐标系下的坐标分别是 $P_0$ 和 $P_1$.
 
 第一步绕x轴旋转$\psi$角度，对应的旋转矩阵即为两者之间的坐标变换矩阵：
+
 $$
 R_xP_x=P_0
 $$
@@ -114,17 +113,23 @@ $$
 其中 $P_{xyz}=P_{1}$.
 
 三个式子迭代，就得到了
+
 $$
 R_xR_yR_zP_1=P_0
 $$
+
 两者之间最终的坐标变换矩阵最终是这样的：
+
 $$
 R_{local}=R_xR_yR_z
 $$
+
 反直觉的是，如果把 $P_1$ 和 $P_0$ 的关系换一种方法写：
+
 $$
 P_1=R_z^TR_y^TR_x^TP_0
 $$
+
 分开的三个矩阵的作用顺序是指定的 $x-y-z$，但他们是以转置，也就是逆矩阵的形式作用在 $P_0$ 上的。
 
 下面问题来了，是不是绕全局坐标系旋转，他们就会以原形式作用呢？往下看。
@@ -133,38 +138,53 @@ $$
 
 如果我们分步来看这个过程，会发现绕$x$的轴旋转完成后，两个坐标系不重合，我们的坐标都是被旋转的局部坐标系下的，而前面给出的绕坐标轴的旋转矩阵能够作用的前提是**转轴是定义坐标所使用的坐标系的坐标轴**，这一条件不成立，就无法使用上面的简单形式。
 问题的本质是得到每一步相应的旋转矩阵。第一步与绕局部坐标旋转的情形无异：
+
 $$
 R_xP_x=P_0
 $$
+
 然而，接下来就不能直接用前面求得的 $R_y(\theta)$ 了，因为旋转轴不是局部坐标系的 $Y$ 轴了。我们需要把全局坐标系的 $y$ 轴正方向在局部坐标系中用单位向量 $\boldsymbol{n}_y$ 表示出来，经过旋转我们很好求得：
+
 $$
 \boldsymbol{n}_y=R_x^T\left[0\quad 1\quad 0\right]^T \\
 $$
+
 第二步的坐标变换矩阵就变成了绕 $\boldsymbol{n}_y$ 旋转角度 $\theta$。对应的旋转矩阵很好计算但形式会比较复杂，记为 $R_{xy}$，那么第二步的转化可以写成
+
 $$
 R_{xy}P_{xy}=P_x
 $$
+
 同理，最后一步，需要得到两步旋转后全局$z$轴同向的 $\boldsymbol{n}_z$.
+
 $$
 \boldsymbol{n}_z=R_{xy}^TR_x^T[0\quad 0\quad 1]^T
 $$
+
 绕 $\boldsymbol{n}_z$ 旋转角度 $\varphi$ 的矩阵是 $R_{xyz}$，那么
+
 $$
 R_{xyz}P_{xyz}=P_{xy}
 $$
+
 坐标变换矩阵就是：
+
 $$
 R_{global}=R_xR_{xy}R_{xyz}
 $$
+
 ~~这可比上一种情形要复杂得多，这也是为什么一般都用欧拉角的静态定义。~~
 
 #### 勘误
 
 实际上绕全局固定坐标系旋转的欧拉角可以有更好的表达形式，上述的表达我认为是对的，但是没有什么实际意义。正式应用中，这种绕全局坐标轴旋转的欧拉角叫做 "RPY" (Roll, Pitch, Yaw)。先给出旋转矩阵的形式（按照 $x-y-z$ 的顺序旋转）：
+
 $$
 R_{global}=R_zR_yR_x
 $$
+
 证明的话，可以从坐标变换的根本出发，即基底变换。全局坐标系的基底为：
+
 $$
 [\boldsymbol{\varepsilon}_1\quad\boldsymbol{\varepsilon}_2\quad\boldsymbol{\varepsilon}_3]=
 \left[\begin{matrix}
@@ -173,27 +193,37 @@ $$
 0 & 0 & 1
 \end{matrix}\right]
 $$
+
 在全局坐标系中的坐标为
 
 三个基底都可以作为单独的向量。在对目标局部坐标系进行旋转时，对每个基底的旋转是等同的。最开始，目标基底和全局基底相等。本质上是对向量的旋转，以 $\boldsymbol{\varepsilon}_1$ 为例，首先绕x轴旋转，得到了 $R_x\boldsymbol{\varepsilon}_1$ 为新的基向量；下一步绕 $y$ 轴旋转，得到了 $R_y(R_x\boldsymbol{\varepsilon}_1)$；最后得到的是
+
 $$
 \boldsymbol{\varepsilon}_1^\prime=R_zR_yR_x\boldsymbol{\varepsilon}_1
 $$
+
 因此，我们可以发现基底的变换满足：
+
 $$
 [\boldsymbol{\varepsilon}_1^\prime\quad\boldsymbol{\varepsilon}_2^\prime\quad\boldsymbol{\varepsilon}_3^\prime]=R_zR_yR_x[\boldsymbol{\varepsilon}_1\quad\boldsymbol{\varepsilon}_2\quad\boldsymbol{\varepsilon}_3]
 $$
+
 这就可以直接作为坐标系之间的旋转变换关系了。
 
 事实上，考虑到 $[\boldsymbol{\varepsilon}_1\quad\boldsymbol{\varepsilon}_2\quad\boldsymbol{\varepsilon}_3]=I$，上面的等式可以表达为更简单的形式：
+
 $$
 [\boldsymbol{\varepsilon}_1^\prime\quad\boldsymbol{\varepsilon}_2^\prime\quad\boldsymbol{\varepsilon}_3^\prime]=R_zR_yR_x
 $$
+
 如果我们进一步想由此写出坐标转换关系，那么根据基底和坐标的关系：
+
 $$
 [\boldsymbol{\varepsilon}_1^\prime\quad\boldsymbol{\varepsilon}_2^\prime\quad\boldsymbol{\varepsilon}_3^\prime]P_1=[\boldsymbol{\varepsilon}_1\quad\boldsymbol{\varepsilon}_2\quad\boldsymbol{\varepsilon}_3]P_0
 $$
+
 即
+
 $$
 R_zR_yR_xP_1=P_0
 $$
@@ -201,14 +231,19 @@ $$
 ### 转向量的情形
 
 针对向量的旋转问题中，我们更多关注的是：一个向量 $P_0$ 经过指定的旋转之后，得到的向量在原坐标系下的坐标 $P_1$。如果绕全局坐标系旋转，这个转换就很直接了（依然是按照 $x-y-z$)的顺序：
+
 $$
 P_1=R_zR_yR_xP_0
 $$
+
 而如果我们在转动向量的时候，是以其局部坐标为基准的（不要以为这种~~反人类的~~旋转方式不存在，事实上，BVH 中的节点旋转就可以说是这么定义的），那么可以逆向思考，即把这个旋转问题转化为坐标转换矩阵的求解。如果我们以局部坐标系为参考，那么旋转过程中向量的坐标是不变的，旋转等价于绕固定的三个轴对全局坐标系作**方向相反**的旋转。根据上面的求解的结果，我们知道坐标转换关系是：
+
 $$
 R_z^TR_y^TR_x^TP_1=P_0
 $$
+
 于是：
+
 $$
 P_1=R_xR_yR_zP_0
 $$

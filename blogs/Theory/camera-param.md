@@ -77,29 +77,37 @@ date: 2021-03-20
 前一节图中，**以相机坐标系为基准**，物点 $A$ 坐标为 $\boldsymbol{X}_c=[x\quad y\quad z]^T$，像点 $A^\prime$ 在我们翻转到 $z$ 正半轴的像平面上，因此坐标是 $\boldsymbol{X}_c^\prime = [x^\prime\quad y^\prime\quad f]^T$.
 
 你应该已经发现了，这两个点和原点在一条线上，因为光沿直线传播嘛。这就给我们的计算带来了极大的便利，因为 $A$ 和 $A^\prime$ 两者的坐标成比例：
+
 $$\frac{x}{x^\prime} = \frac{y}{y^\prime} = \frac{z}{f}$$
 
 成像，最后是要落在像平面上。像平面坐标和相机坐标系的 $xOy$ 平面有两点不同：1) 度量单位是像素；2) 原点在左上角，不在交点 $F$ 处。因此要做这一步坐标转换，有一步单位转换（数值上看就是**缩放**），和一步**平移**。
 
 $A^\prime$ 点在像平面上的坐标就是 ：
+
 $$
 \boldsymbol{X}_{img}=[\alpha x^\prime+x_0\quad \alpha y^\prime + y_0]^T=\left[\frac{\alpha f}{z}x+x_0\quad  \frac{\alpha f}{z}y + y_0\right]^T
 $$
+
 这里 $\alpha$ 表示单位长度的像素个数，$(x_0, y_0)$ 是 $F$ 点在像平面上的坐标（像素）。
 
 把 $A^\prime$ 的二维坐标写成齐次坐标形式，再乘以 $z$，我们就得到了一个等效的表达形式：
+
 $$
 \tilde{\boldsymbol{X}}_{img} = \left[\begin{matrix}\alpha fx+zx_0 \\\alpha fy + zy_0 \\ z\end{matrix}\right]
 $$
+
 这样，我们的坐标变换就可以用一个 $3\times 3$ 的矩阵表示：
+
 $$
 \tilde{\boldsymbol{X}}_{img} = \left[\begin{matrix}\alpha f & 0 & x_0 \\ 0 & \alpha f & y_0 \\ 0 & 0 & 1\end{matrix}\right]\left[\begin{matrix}x \\ y \\ z\end{matrix}\right]
 $$
+
 考虑到实际相机，水平和垂直两个方向的成像比例不一定一致，因此把两个 $\alpha f$ 分开，写成 $x$ 方向的 $f_x$ 和 $y$ 方向的 $f_y$. 同时，成像有时会有一定程度的扭曲（skew），导致实际上成像结果中的两个坐标轴并不垂直，要实现这一点只需要在内参矩阵中加入一个扭曲系数 $s$ 即可。下图来自[这篇博客](https://blog.immenselyhappy.com/post/camera-axis-skew/#:~:text=The%20intrinsic%20parameters%20of%20a%20camera%20encompass%20the,into%20a%20matrix%20called%20the%20calibration%20matrix%20K)。
 
 ![](camera-param/skew.jpg)
 
 最终的内参矩阵如下：
+
 $$
 K=\left[\begin{matrix}f_x & s & x_0 \\ 0 & f_y & y_0 \\ 0 & 0 & 1\end{matrix}\right]
 $$
@@ -120,17 +128,23 @@ $$
 OK，下面我们来看看同一个点在世界坐标系的坐标 $\boldsymbol{X}_w=[x_w\quad y_w\quad z_w]^T$ 和相机坐标系的坐标 $\boldsymbol{X}_c=[x_c\quad y_c\quad z_c]^T$ 的关系。
 
 把相机坐标系平移到原点和世界坐标系重合，$\boldsymbol{X}_c$ 在新的坐标系下变成了 $\boldsymbol{X}_c - \boldsymbol{T}$. 再根据旋转矩阵含义（如果想详细了解旋转矩阵，可以参考我之前写的[这篇](https://chzh9311.github.io/ckleov0o20009jsve2ajbhdq3/EulerAngle/)），我们就可以得到这两个坐标间的关系：
+
 $$
 R\boldsymbol{X}_w = \boldsymbol{X}_c - \boldsymbol{T}
 $$
+
 如果写成一般的齐次坐标形式，那么结果就是：
+
 $$
 \tilde{\boldsymbol{X}}_c = \left[\begin{matrix}R & \boldsymbol{T} \\ \boldsymbol{0} & 1\end{matrix}\right]\tilde{\boldsymbol{X}}_w
 $$
+
 中间的这个 $4\times 4$ 的矩阵，就是我们所说的**外参矩阵**：
+
 $$
 M = \left[\begin{matrix}R & \boldsymbol{T} \\ \boldsymbol{0} & 1\end{matrix}\right]
 $$
+
 这个矩阵实现的是将世界坐标系的坐标转换到局部坐标系。
 
 # 投影矩阵
@@ -140,12 +154,15 @@ $$
 ![](camera-param/KM.png)
 
 这个关系写明就是：
+
 $$
 \tilde{\boldsymbol{X}}_{img} = K[R|\boldsymbol{T}]\boldsymbol{X}_w
 $$
+
 外参矩阵只取了前 3 行，因为我们不需要生成齐次坐标。
 
 新的矩阵我们把它记作 $P$，这就是我们的**投影矩阵**。它的作用就是内参矩阵 + 外参矩阵这么简单。
+
 $$
 P=K[R|\boldsymbol{T}]
 $$

@@ -222,8 +222,6 @@ tf::StampedTransform transform;
 
 发布话题以及必要的 `sleep`.
 
-
-
 ### 后续工作
 
 在**刚建立的 package 里的** CMakeList.txt 中加入以下两行：
@@ -245,8 +243,6 @@ $ catkin_make
 ```shell
 $ source devel/setup.bash
 ```
-
-
 
 ## 显示路径
 

@@ -1,24 +1,24 @@
 import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
-import { webpackBundler } from '@vuepress/bundler-webpack'
+// @ts-ignore
+import texmath from 'markdown-it-texmath';
+// @ts-ignore
+import katex from 'katex';
 
 export default defineUserConfig({
   title: "焦白",
   description: "我从冲浪还被叫做冲浪的时候就开始冲浪了",
   bundler: viteBundler(),
   base: '/Blog/',
-  // bundler: webpackBundler(),
+  extendsMarkdown: (md) => {
+    md.use(texmath, { engine: katex, delimiters: 'dollars' });
+  },
   theme: recoTheme({
     logo: "/icon.png",
     author: "CabbaFi",
     authorAvatar: "/icon.png",
     lastUpdatedText: "",
-	markdown: {
-		math: {
-			type: "mathjax",
-		}
-	},
     // series 为原 sidebar
     series: {
       "/docs/theme-reco/": [
